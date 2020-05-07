@@ -7,7 +7,6 @@ public class Carros extends Thread{
 	private int carro;
 	private static int csentido = 0;
 	private static String sentido;
-//	private static String sentidoOp;
 	private Semaphore semaforo;
 	
 	public Carros(int carro, Semaphore semaforo) {
@@ -32,23 +31,15 @@ public class Carros extends Thread{
 	public void Sentido() {
 		if (csentido == 0) {
 			sentido = "Norte";
-//			sentidoOp = "Sul";
-//			System.out.println("#"+carro+" veio do "+sentidoOp+" e parou.");
 			csentido++;
 		} else if (csentido == 1) {
 			sentido = "Sul";
-//			sentidoOp = "Norte";
-//			System.out.println("#"+carro+" veio do "+sentidoOp+" e parou.");
 			csentido++;
 		}else if (csentido == 2) {
 			sentido = "Leste";
-//			sentidoOp = "Oeste";
-//			System.out.println("#"+carro+" veio do "+sentidoOp+" e parou.");
 			csentido++;
 		}else if(csentido == 3) {
 			sentido = "Oeste";
-//			sentidoOp = "Leste";
-//			System.out.println("#"+carro+" veio do "+sentidoOp+" e parou.");
 			csentido++;
 		}
 	}
